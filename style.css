@@ -1,0 +1,185 @@
+/* Responsividade para tablets */
+@media (max-width: 900px) {
+    .profiles {
+        gap: 1.5rem;
+        /* Reduz espaço entre perfis */
+    }
+
+    .profile img {
+        width: 110px;
+        /* Imagem menor */
+        height: 110px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* Título menor */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem 0.5rem;
+        /* Espaçamento lateral */
+    }
+
+    .profiles {
+        flex-direction: column;
+        /* Perfis em coluna */
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    .profile img {
+        width: 80px;
+        /* Imagem ainda menor */
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    .profile figcaption {
+        font-size: 1rem;
+    }
+
+    footer small {
+        font-size: 0.9rem;
+    }
+}
+
+body {
+    background: #141414;
+    /* Cor de fundo escura semelhante à Netflix */
+    color: #fff;
+    /* Cor do texto principal */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Fonte moderna e legível */
+    margin: 0;
+    /* Remove margens padrão do body */
+    min-height: 100vh;
+    /* Garante que o body ocupe toda a altura da tela */
+    display: flex;
+    /* Usa flexbox para layout vertical */
+    flex-direction: column;
+    /* Organiza os filhos em coluna */
+}
+
+header,
+footer {
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 2rem 0 1rem 0;
+    /* Espaçamento superior e inferior */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    /* Tamanho grande para o título */
+    font-weight: 700;
+    /* Negrito */
+    letter-spacing: 1px;
+    /* Espaçamento entre letras */
+    margin: 0;
+    /* Remove margem padrão */
+}
+
+main {
+    flex: 1;
+    /* Ocupa o espaço restante da tela */
+    display: flex;
+    /* Flexbox para centralizar conteúdo */
+    flex-direction: column;
+    /* Coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+}
+
+.profiles {
+    display: flex;
+    /* Exibe perfis lado a lado */
+    gap: 2.5rem;
+    /* Espaço entre os perfis */
+    justify-content: center;
+    /* Centraliza os perfis */
+    margin-top: 2rem;
+    /* Espaço acima dos perfis */
+    list-style: none;
+    /* Remove o ponto da lista */
+    padding: 0;
+    /* Remove padding padrão da ul */
+    margin-left: 0;
+    /* Remove margem padrão da ul */
+}
+
+.profile {
+    display: flex;
+    /* Flexbox para alinhar imagem e texto */
+    flex-direction: column;
+    /* Coluna */
+    align-items: center;
+    /* Centraliza conteúdo */
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+    color: #fff;
+    /* Cor do texto */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Animação suave ao interagir */
+}
+
+.profile figure {
+    margin: 0;
+    /* Remove margem padrão da figure */
+}
+
+.profile img {
+    width: 140px;
+    /* Largura fixa da imagem */
+    height: 140px;
+    /* Altura fixa da imagem */
+    object-fit: cover;
+    /* Cobre o espaço mantendo proporção */
+    border-radius: 50%;
+    /* Deixa a imagem circular */
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+    /* Sombra para destacar */
+    transition: border 0.2s, box-shadow 0.2s;
+    /* Animação suave */
+    background: #333;
+    /* Fundo para imagens sem transparência */
+}
+
+.profile:hover img,
+.profile:focus img {
+    box-shadow: 0 4px 24px #fff7e7aa;
+    /* Sombra mais intensa ao passar o mouse */
+    transform: scale(1.03);
+    /* Leve aumento ao passar o mouse */
+    transition: 0.2s;
+    /* Animação suave */
+}
+
+.profile figcaption {
+    margin-top: 1rem;
+    /* Espaço acima do nome */
+    font-size: 1.2rem;
+    /* Tamanho da fonte do nome */
+    font-weight: 500;
+    /* Peso da fonte */
+    letter-spacing: 0.5px;
+    /* Espaçamento entre letras */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+footer small {
+    color: #888;
+    /* Cor do texto do rodapé */
+    font-size: 1rem;
+    /* Tamanho da fonte do rodapé */
+}
