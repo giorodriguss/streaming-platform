@@ -1,14 +1,14 @@
-
-// Adiciona evento para armazenar perfil ativo no localStorage
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.profile').forEach(profile => {
-        profile.addEventListener('click', function (e) {
+        profile.addEventListener('click', function () {
             const img = this.querySelector('img');
             const caption = this.querySelector('figcaption');
+
             if (img && caption) {
-                console.log('Imagem src:', img.getAttribute('src'));
+                const nomeImagem = img.getAttribute('src').split('/').pop();
+
                 localStorage.setItem('perfilAtivoNome', caption.textContent);
-                localStorage.setItem('perfilAtivoImagem', img.getAttribute('src'));
+                localStorage.setItem('perfilAtivoImagem', nomeImagem);
             }
         });
     });

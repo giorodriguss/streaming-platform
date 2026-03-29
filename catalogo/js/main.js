@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nomePerfil && imagemPerfil) {
         const kidsLink = document.querySelector('.kids-link');
         const profileIcon = document.querySelector('.profile-icon');
-        
+
         if (kidsLink) kidsLink.textContent = nomePerfil;
-        if (profileIcon) profileIcon.src = imagemPerfil;
+        profileIcon.src = `../assets/${imagemPerfil}`;
     }
 
     const container = document.getElementById('main-content');
-    
+
     if (container) {
         categories.forEach(category => {
             const carousel = createCarousel(category);
